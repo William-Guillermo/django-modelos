@@ -8,10 +8,10 @@ from django.db import models
 # respectivos campos
 
 class Clientes(models.Model):
-    nombre=models.CharField(max_length=30)
-    direccion=models.CharField(max_length=50)
-    email=models.EmailField()
-    tfono=models.CharField(max_length=7)
+    nombre=models.CharField(max_length=50)
+    direccion=models.CharField(max_length=50,verbose_name="La Direccion")
+    email=models.EmailField(blank=True,null=True)  # Dato Opcional (blank=True,null=True)
+    tfono=models.CharField(max_length=10)
 
 class Articulos(models.Model):
     nombre=models.CharField(max_length=30)
